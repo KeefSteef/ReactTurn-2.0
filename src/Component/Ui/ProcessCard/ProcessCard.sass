@@ -1,0 +1,64 @@
+@mixin flex-centring
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+.process_card, .process_load-container
+    @include flex-centring
+
+
+.process_card
+    width: 600px
+    position: absolute
+    z-index: 95
+    padding-top: 50px
+    left: 30%
+    top: 30%
+    height: 300px
+    border-radius: 10px
+    background: #ffffff
+
+.progress_markers
+    width: 100%
+    display: flex
+    justify-content: space-around
+
+.process_load-container
+    width: 100%
+    flex-direction: column
+
+.load_stick
+    display: flex
+    align-items: center
+    padding: 2px
+    width: 75%
+    height: 7px
+    //border: #4388f7 solid 1.5px
+    border-radius: 5px
+    span
+        position: relative
+        display: block
+        height: 7px
+        width: 300px
+        background: #4388f7
+        border-radius: 5px
+        margin-top: -0.1px
+
+
+.marker_ball
+    width: 70px
+    position: relative
+    z-index: 30
+    bottom: 40px
+    height: 70px
+    background: #4388f7
+    color: #ffffff
+    font-size: 12px
+    border-radius: 50%
+    @include flex-centring
+
+.disabled_marker-ball
+    border: solid 2px #4388f7 !important
+    background: #ffffff !important
+    color: #4388f7 !important
